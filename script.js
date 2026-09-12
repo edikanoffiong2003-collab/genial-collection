@@ -3365,7 +3365,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('genialCurrentUser', JSON.stringify({ name: userName, email }));
 
         alert(`Account created successfully! Welcome to Genial Collection, ${userName}.`);
-        window.location.href = 'GENIAL COLLECTION.html';
+        window.location.href = 'geinalcollection.html';
       } else {
         const foundUser = registeredUsers.find(u => u.email === email && u.password === password);
 
@@ -3373,7 +3373,7 @@ document.addEventListener('DOMContentLoaded', () => {
           localStorage.setItem('genialAuth', 'true');
           localStorage.setItem('genialCurrentUser', JSON.stringify(foundUser));
           alert(`Welcome back, ${foundUser.name || 'Valued Customer'}!`);
-          window.location.href = 'GENIAL COLLECTION.html';
+          window.location.href = 'geinalcollection.html';
         } else {
           alert('Account not found or incorrect password! Click "Sign up here" to create an account.');
         }
@@ -3408,7 +3408,7 @@ document.addEventListener('DOMContentLoaded', () => {
           localStorage.setItem('genialCurrentUser', JSON.stringify({ name, email }));
 
           alert(`Logged in via ${platform}! Redirecting...`);
-          window.location.href = 'GENIAL COLLECTION.html';
+          window.location.href = 'geinalcollection.html';
         }
       };
 
@@ -3451,55 +3451,60 @@ document.addEventListener('DOMContentLoaded', () => {
   if (returnLoginBtn) {
     returnLoginBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      stopShowcase();
+      if (typeof stopShowcase === 'function') stopShowcase();
     });
     returnLoginBtn.addEventListener('touchend', (e) => {
       e.preventDefault();
-      stopShowcase();
+      if (typeof stopShowcase === 'function') stopShowcase();
     });
   }
 
+  // ======================================================
+  // 6. CONSULTATION FORM & WHATSAPP INTEGRATION
+  // ======================================================
+  const ceoWhatsAppNumber = '2348000000000'; 
+  const consultationForm = document.getElementById('consultationForm');
+  const whatsappChatBtn = document.getElementById('whatsappChatBtn');
+
+  if (consultationForm) {
+    consultationForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('consult-name')?.value.trim() || 'N/A';
+      const phone = document.getElementById('consult-phone')?.value.trim() || 'N/A';
+      const style = document.getElementById('consult-style')?.value || 'Not selected';
+      const budget = document.getElementById('consult-budget')?.value || 'Not selected';
+      const notes = document.getElementById('consult-notes')?.value.trim() || 'None';
+
+      const rawMessage = 
+        `*New Custom Consultation Request*\n\n` +
+        `👤 *Name:* ${name}\n` +
+        `📞 *Phone:* ${phone}\n` +
+        `👗 *Style Interest:* ${style}\n` +
+        `💰 *Budget Range:* ${budget}\n` +
+        `📝 *Measurements / Notes:* ${notes}`;
+
+      const encodedMessage = encodeURIComponent(rawMessage);
+      window.open(`https://wa.me/${ceoWhatsAppNumber}?text=${encodedMessage}`, '_blank');
+    });
+  }
+
+  if (whatsappChatBtn) {
+    whatsappChatBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const quickMessage = encodeURIComponent("Hello Genial Collection, I'd like to make an inquiry about a custom order.");
+      window.open(`https://wa.me/${ceoWhatsAppNumber}?text=${quickMessage}`, '_blank');
+    });
+  }
+
+  // Initialize video engine for both Perfume and Tailoring sections
+  initSectionVideos('#shop');
+  initSectionVideos('#tailoring');
+  initSectionVideos('.tailoring-section');
 });
-// ======================================================
-// 2. CONSULTATION FORM & WHATSAPP INTEGRATION
-// ======================================================
-const ceoWhatsAppNumber = '2348000000000'; 
-const consultationForm = document.getElementById('consultationForm');
-const whatsappChatBtn = document.getElementById('whatsappChatBtn');
-
-if (consultationForm) {
-  consultationForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById('consult-name')?.value.trim() || 'N/A';
-    const phone = document.getElementById('consult-phone')?.value.trim() || 'N/A';
-    const style = document.getElementById('consult-style')?.value || 'Not selected';
-    const budget = document.getElementById('consult-budget')?.value || 'Not selected';
-    const notes = document.getElementById('consult-notes')?.value.trim() || 'None';
-
-    const rawMessage = 
-      `*New Custom Consultation Request*\n\n` +
-      `👤 *Name:* ${name}\n` +
-      `📞 *Phone:* ${phone}\n` +
-      `👗 *Style Interest:* ${style}\n` +
-      `💰 *Budget Range:* ${budget}\n` +
-      `📝 *Measurements / Notes:* ${notes}`;
-
-    const encodedMessage = encodeURIComponent(rawMessage);
-    window.open(`https://wa.me/${ceoWhatsAppNumber}?text=${encodedMessage}`, '_blank');
-  });
-}
-
-if (whatsappChatBtn) {
-  whatsappChatBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    const quickMessage = encodeURIComponent("Hello Genial Collection, I'd like to make an inquiry about a custom order.");
-    window.open(`https://wa.me/${ceoWhatsAppNumber}?text=${quickMessage}`, '_blank');
-  });
-}
 
 // ======================================================
-// 3. BACKGROUND VIDEO PLAYLIST CONTROLLER (MULTI-SECTION FIX)
+// BACKGROUND VIDEO PLAYLIST CONTROLLER (MULTI-SECTION FIX)
 // ======================================================
 function initSectionVideos(containerSelector) {
   const container = document.querySelector(containerSelector);
@@ -3574,15 +3579,8 @@ function initSectionVideos(containerSelector) {
   switchVideo(0);
 }
 
-// Initialize video engine for both Perfume and Tailoring sections
-document.addEventListener('DOMContentLoaded', () => {
-  initSectionVideos('#shop');
-  initSectionVideos('#tailoring');
-  initSectionVideos('.tailoring-section');
-});
-
 // ======================================================
-// 4. CATEGORY DRAWER & FILTER CONTROLS
+// CATEGORY DRAWER & FILTER CONTROLS
 // ======================================================
 function toggleCategoryDrawer() {
   const drawer = document.getElementById('categoryDrawer');
