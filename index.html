@@ -1,522 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Genial Collection | Luxury Perfumes & Tailoring</title>
-    <meta
-      name="description"
-      content="Genial Collection offers luxury perfumes, bespoke tailoring, and premium fashion consultations for modern elegance."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="site-header" id="top">
-        <nav class="nav container">
-          <div class="brand-block">
-            <img
-              class="brand-mark"
-              src="WhatsApp Image 2026-08-09 at 4.50.37 PM.jpeg"
-              alt="Genial Collection logo"
-            />
-            <div>
-              <p class="brand-name">Genial Collection</p>
-              <span class="brand-tag">Luxury Fashion & Fragrance</span>
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genial Collection | Welcome</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body">
 
-          <div class="nav-links">
-            <a href="#shop">Shop</a>
-            <a href="#tailoring">Tailoring</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
-          </div>
-
-          <div class="header-actions">
-            <!-- Search Icon -->
-            <button class="icon-btn" aria-label="Search">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-            </button>
-
-            <!-- Account/Login Icon -->
-            <a href="login.html" class="icon-btn" aria-label="Account">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            </a>
-
-            <button id="cartButton" class="cart-button" aria-label="View Cart">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <path d="M16 10a4 4 0 0 1-8 0"></path>
-              </svg>
-              <span id="cartCount">0</span>
-            </button>
-          </div>
-        </nav>
-      </header>
-
-      <main>
-        <section class="hero container">
-          <div class="hero-copy">
-            <p class=" ">Curated for the modern icon</p>
-            <h1>Signature scents and tailored looks designed around you.</h1>
-            <p class="hero-text">
-              Discover refined perfumes and bespoke fashion crafted with precision,
-              elegance, and personal attention.
-            </p>
-            <div class="hero-actions">
-              <a href="#shop" class="primary-btn">Shop Fragrance</a>
-              <a href="#tailoring" class="secondary-btn">Book a Tailor</a>
-            </div>
-            <ul class="hero-metrics">
-              <li><strong>4.9/5</strong><span>Client rating</span></li>
-              <li><strong>1,200+</strong><span>Orders fulfilled</span></li>
-              <li><strong>48h</strong><span>Tailoring response</span></li>
-            </ul>
-          </div>
-
-          <div class="hero-visual">
-            <div class="hero-slider">
-              <!-- 8 Slider Images -->
-              <div class="slide active">
-                <img src="luxury perfume/1786748236046.jpg" alt="Featured Image 1">
-              </div>
-              <div class="slide">
-                <img src="luxury perfume/1786748144660.jpg" alt="Featured Image 2">
-              </div>
-              <div class="slide">
-                <img src="luxury perfume/1786748345255.jpg" alt="Featured Image 3">
-              </div>
-              <div class="slide">
-                <img src="luxury perfume/1786748055121.jpg" alt="Featured Image 4">
-              </div>
-              <div class="slide">
-                <img src="luxury perfume/03d3bdae5fa6a5d9e6642f25972738d0.jpg" alt="Featured Image 5">
-              </div>
-              <div class="slide">
-                <img src="luxury perfume/de4fc0a0c0ce52fbea7a254cbb2db051.jpg" alt="Featured Image 6">
-              </div>
-              <div class="slide">
-                <img src="luxury perfume/c5fd94d63d6a4d221dd5caa781af1d3f.jpg" alt="Featured Image 7">
-              </div>
-              <div class="slide">
-                <img src="luxury perfume/IMG-20260706-WA0006.jpg" alt="Featured Image 8">
-              </div>
-
-              <!-- 8 Navigation Dots -->
-              <div class="slider-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- UNIFIED PERFUME CATALOG SECTION -->
-        <section class="favorites container" id="shop">
-          <div class="video-playlist-wrapper">
-            <video autoplay muted playsinline class="hero-bg-video active">
-              <source src="luxury perfume/1fcae43ec495c1ba7479595fc7514594.mp4" type="video/mp4">
-            </video>
-            <video muted playsinline class="hero-bg-video">
-              <source src="luxury perfume/31d3a0bd9330774a11c9116a92e8be91_720w.mp4" type="video/mp4">
-            </video>
-            <video muted playsinline class="hero-bg-video">
-              <source src="luxury perfume/7d4c0254c590c91b623d299e70b0a7ed_720w.mp4" type="video/mp4">
-            </video>
-            <div class="bg-video-overlay"></div>
-          </div>
-
-          <div class="section-heading">
-            <p class="subtitle">LUXURY COLLECTION</p>
-            <h2>Fragrance essentials</h2>
-            <a href="#contact" class="text-link">Need personal advice?</a>
-          </div>
-
-          <!-- Search Panel with Category Hamburger Button -->
-          <div class="search-panel" aria-label="Search perfumes" style="display: flex; align-items: center; gap: 12px;">
-            <!-- 3-Line Hamburger Trigger -->
-            <button type="button" class="category-menu-btn" onclick="toggleCategoryDrawer()" aria-label="Open Categories">
-              <span class="hamburger-bar"></span>
-              <span class="hamburger-bar"></span>
-              <span class="hamburger-bar"></span>
-            </button>
-
-            <div style="flex-grow: 1;">
-              <label class="search-label" for="perfumeSearch">Search perfume</label>
-              <input
-                id="perfumeSearch"
-                class="search-input"
-                type="search"
-                placeholder="Type a perfume name..."
-                autocomplete="off"
-              />
-            </div>
-          </div>
-
-          <!-- Product Grid Container -->
-          <div class="product-grid" id="productGrid"></div>
-        </section>
-      </main>
-    </div>
-
-    <!-- SLIDE-OUT CATEGORY DRAWER -->
-    <div id="categoryDrawer" class="category-drawer">
-      <div class="drawer-header">
-        <h3>Fragrance Categories</h3>
-        <button type="button" class="close-drawer-btn" onclick="toggleCategoryDrawer()">&times;</button>
-      </div>
-      <ul class="drawer-menu">
-        <li><a href="#" onclick="filterByCategory('All', event)">All Fragrances</a></li>
-        <li><a href="#" onclick="filterByCategory('Perfume', event)">Perfume</a></li>
-        <li><a href="#" onclick="filterByCategory('Body Spray', event)">Body Spray</a></li>
-        <li><a href="#" onclick="filterByCategory('Body Mist', event)">Body Mist</a></li>
-        <li><a href="#" onclick="filterByCategory('Deodorant', event)">Deodorant</a></li>
-      </ul>
-    </div>
-
-    <!-- DARK BACKDROP OVERLAY -->
-    <div id="drawerOverlay" class="drawer-overlay" onclick="toggleCategoryDrawer()"></div>
-
-    <script src="script.js"></script>
-  </body>
-</html>
-
-
-       <section class="tailor-section" id="tailoring">
-  <video autoplay muted playsinline class="bg-video active">
-    <source src="luxury perfume/From Klickpin.com- 85 Clever Digital Product Ideas-pin-id-11047961583131805.mp4" type="video/mp4">
-  </video>
-  <video muted playsinline class="bg-video">
-    <source src="luxury perfume/836147f91acbbf802e3129154f96d50c_720w (1).mp4" type="video/mp4">
-  </video>
-  <div class="bg-video-overlay"></div>
-  <div class="container tailor-wrap">
-    <div class="tailor-copy">
-      <p class="eyebrow">Personal styling</p>
-      <h2>Bespoke tailoring for standout silhouettes.</h2>
-      <p>
-        From modern bridal looks to executive tailoring and couture edits,
-        our stylists create pieces that move with your lifestyle and shape.
-      </p>
-              <div class="service-list">
-                <div>
-                  <strong>01</strong>
-                  <span>Style consultation</span>
-                </div>
-                <div>
-                  <strong>02</strong>
-                  <span>Measurement review</span>
-                </div>
-                <div>
-                  <strong>03</strong>
-                  <span>Final fitting</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="tailor-form-box">
-              <form id="tailoringForm" class="tailoring-form">
-                <h3>Request a custom consultation</h3>
-                <div class="form-grid">
-                  <label>
-                    Full name
-                    <input type="text" name="name" placeholder="Your name" required />
-                  </label>
-                  <label>
-                    Phone number
-                    <input type="tel" name="phone" placeholder="+234..." required />
-                  </label>
-                  <label>
-                    Style interest
-                    <select name="style" required>
-                      <option value="">Choose a style</option>
-                      <option>Corporate Suit</option>
-                      <option>Evening Gown</option>
-                      <option>Traditional Fashion</option>
-                      <option>Bridal Attire</option>
-                    </select>
-                  </label>
-                  <label>
-                    Budget range
-                    <select name="budget">
-                      <option>Luxury</option>
-                      <option>Premium</option>
-                      <option>Signature</option>
-                    </select>
-                  </label>
-                </div>
-
-                <label>
-                  Measurements / Notes
-                  <textarea name="notes" rows="4" placeholder="Share your preferred measurements, a style reference, or any details you'd like us to consider."></textarea>
-                </label>
-
-                <div class="cta-row">
-                  <button type="submit" class="primary-btn">Submit request</button>
-                  <a href="https://wa.me/2348081924652" target="_blank" rel="noreferrer" class="whatsapp-link">WhatsApp chat</a>
-                </div>
-              </form>
-            </div>
-          </div>
-  
-          <section class="gallery-section container" id="gallery">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Trending looks</p>
-              <h2>Styles clients love to customize</h2>
-            </div>
-            <button class="secondary-btn small" id="viewConsultation">Book a callback</button>
-          </div>
-
-          <div class="gallery-grid">
-            <article class="gallery-card tall image-slide-card" data-slide-interval="1600">
-              <div class="slide-track">
-                <img class="slide-image active" src="assets/silhouettes/1000595914.jpg" alt="Tailored evening silhouette 1" />
-                <img class="slide-image" src="assets/silhouettes/1000595967.jpg" alt="Tailored evening silhouette 2" />
-                <img class="slide-image" src="assets/silhouettes/1000595972.jpg" alt="Tailored evening silhouette 3" />
-                <img class="slide-image" src="assets/silhouettes/1000596004.jpg" alt="Tailored evening silhouette 4" />
-              </div>
-              <div class="gallery-overlay">
-                <span>Minimal Luxe</span>
-                <h3>Tailored evening silhouettes</h3>
-                <button class="mini-link with-icon" data-style="Minimal Luxe">Request measurement</button>
-              </div>
-            </article>
-
-            <article class="gallery-card image-slide-card" data-slide-interval="1800">
-              <div class="slide-track">
-                <img class="slide-image active" src="assets/bridal/1000596005.jpg" alt="Modern bridal fashion 1" />
-                <img class="slide-image" src="assets/bridal/1000596006.jpg" alt="Modern bridal fashion 2" />
-                <img class="slide-image" src="assets/bridal/1000596007.jpg" alt="Modern bridal fashion 3" />
-              </div>
-              <div class="gallery-overlay">
-                <span>Modern Bride</span>
-                <h3>Elegant bridal couture</h3>
-                <button class="mini-link with-icon" data-style="Modern Bride">Request measurement</button>
-              </div>
-            </article>
-
-            <article class="gallery-card image-slide-card" data-slide-interval="1700">
-              <div class="slide-track">
-                <img class="slide-image active" src="assets/sharp-and-confident/1000595966.jpg" alt="Executive tailoring" />
-              </div>
-              <div class="gallery-overlay">
-                <span>Executive Edit</span>
-                <h3>Sharp, confident tailoring</h3>
-                <button class="mini-link with-icon" data-style="Executive Edit">Request measurement</button>
-              </div>
-            </article>
-
-            <article class="gallery-card wide image-slide-card" data-slide-interval="1800">
-              <div class="slide-track">
-                <img class="slide-image active" src="assets/drapes-and-motifs/1000595906.jpg" alt="Traditional fashion styling 1" />
-                <img class="slide-image" src="assets/drapes-and-motifs/1000595913.jpg" alt="Traditional fashion styling 2" />
-                <img class="slide-image" src="assets/drapes-and-motifs/1000595993.jpg" alt="Traditional fashion styling 3" />
-              </div>
-              <div class="gallery-overlay">
-                <span>Traditional Glam</span>
-                <h3>Statement drapes and custom motifs</h3>
-                <button class="mini-link with-icon" data-style="Traditional Glam">Request measurement</button>
-              </div>
-            </article>
-          </div>
-        
-      
-
-    <div class="product-body">
-    <span>Bespoke Tailoring</span>
-    <h3>Custom Female Apparel (Deposit)</h3>
-    <p>Initial consultation & measurement deposit</p>
-    <strong>₦5,000 Deposit</strong>
-
-    <div class="tailoring-inputs">
-      <label for="tailoring-date-t1">Preferred Fitting Date:</label>
-      <input type="date" id="tailoring-date-t1">
-
-      <label for="tailoring-notes-t1">Style / Measurement Notes:</label>
-      <input type="text" id="tailoring-notes-t1" placeholder="e.g. Custom Evening Gown, Size 12">
-    </div>
-
-    <button onclick="addTailoringToCart('t1', 'Custom Female Apparel (Deposit)', 5000, './assets/custom-dress.jpg')">
-      Book & Add Deposit to Cart
-    </button>
-  </div>
-</div>
-</div>
-</section>
-</main>
-      <footer class="site-footer" id="contact">
-  <div class="footer-container">
-  
-    <!-- Column 1: Visit Us -->
-    <div class="footer-col">
-      <h4>Visit us</h4>
-      <p>08 Victory Close, Iwofe</p>
-      <p>Port Harcourt, Nigeria</p>
-      <p class="delivery-text">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6h2.5l2.5 4v4h-3"/><path d="M9 18h6"/><path d="M10 9l-3 5h3l2-3"/><path d="M12 6h-4l-1.5 3"/></svg>
-        <span>Delivery across Port Harcourt city</span>
-      </p>
-    </div>
-
-    <!-- Column 2: Contact -->
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <a href="tel:+2348081924652">(234) 808-192-4652</a>
-      <a href="mailto:hello@genialcollection.com">hello@genialcollection.com</a>
-      <p>Mon-Sat: 9:00am - 7:00pm</p>
-    </div>
-
-    <!-- Column 3: Follow & Logo -->
-    <div class="footer-col">
-      <div class="brand-header">
-        <img src="WhatsApp Image 2026-08-09 at 4.50.37 PM.jpeg" alt="Genial Collection Logo" class="footer-logo-img">
-        <div class="brand-text">
-          <p class="brand-name">Genial Collection</p>
-          <span class="brand-tag">Luxury fashion & fragrance</span>
-        </div>
-      </div>
-      
-      <h4>Follow</h4>
-      <div class="social-list">
-        <a href="#" class="social-item instagram">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          <span>Instagram</span>
-        </a>
-        <a href="#" class="social-item pinterest">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 .1-2.9l1.2-5s-.3-.6-.3-1.6c0-1.5.9-2.6 2-2.6 1 0 1.4.7 1.4 1.6 0 1-.6 2.5-1 3.9-.3 1.2.6 2.2 1.8 2.2 2.1 0 3.8-2.2 3.8-5.5 0-2.9-2.1-4.9-5-4.9-3.4 0-5.4 2.6-5.4 5.2 0 1 .4 2.1.9 2.7.1.1.1.2.1.3l-.3 1.3c0 .2-.2.3-.4.2-1.3-.6-2.1-2.5-2.1-4 0-3.8 2.8-7.3 8-7.3 4.2 0 7.5 3 7.5 7 0 4.2-2.6 7.5-6.3 7.5-1.2 0-2.4-.6-2.8-1.4l-.8 2.9c-.3 1.1-1.1 2.5-1.6 3.4A10 10 0 1 0 12 2z"/></svg>
-          <span>Pinterest</span>
-        </a>
-        <a href="https://wa.me/2348081924652" class="social-item whatsapp">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          <span>WhatsApp</span>
-        </a>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Copyright Notice -->
-  <div class="footer-bottom">
-    <p>&copy; 2026 Genial Collection. All Rights Reserved.</p>
-  </div>
-</footer>
-          
-
-    <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart">
-      <div class="cart-header">
-        <h3>Your cart</h3>>>
-        <button class="close-cart" id="closeCart" aria-label="Close cart">×</button>
-      </div>
-      <div class="cart-items" id="cartItems">
-        <p class="empty-cart">Your cart is empty</p>
-      </div>
-      <div class="cart-footer">
-        <div class="total-row">
-          <span>Subtotal</span>
-          <strong id="cartTotal">₦20</strong>
-        </div>
-        <div class="delivery-address-section">
-    <h3>Shipping & Delivery Address</h3>
-    <div class="form-group">
-      <label for="shippingName">Full Name *</label>
-      <input type="text" id="shippingName" placeholder="e.g. Jane Doe" required />
-    </div>
+  <div class="app-viewport">
     
-    <div class="form-group">
-      <label for="shippingPhone">Phone Number (For Courier) *</label>
-      <input type="tel" id="shippingPhone" placeholder="e.g. 08012345678" required />
-    </div>
-
-    <div class="form-group">
-      <label for="shippingAddress">Street Address *</label>
-      <input type="text" id="shippingAddress" placeholder="House number, street name, apartment/suite" required />
-    </div>
-
-    <div class="form-row">
-      <div class="form-group">
-        <label for="shippingCity">City / Town *</label>
-        <input type="text" id="shippingCity" placeholder="e.g. Port Harcourt" required />
-      </div>
-      <div class="form-group">
-        <label for="shippingState">State *</label>
-        <input type="text" id="shippingState" placeholder="e.g. Rivers State" required />
-      </div>
-    </div>
-  </div>
-        <button onclick="generateWhatsAppCheckout()" class="primary-btn">PROCEED TO CHECKOUT</button>
-</button>
-      </div>
-    </aside>
-
-    <div class="modal-backdrop" id="authModal">
-      <div class="modal-card auth-card">
-        <button class="close-modal" data-close="authModal" aria-label="Close">×</button>
-        <div class="modal-header">
-          <p class="eyebrow">Member access</p>
-          <h3>Login to Genial Collection</h3>
+    <!-- ==========================================
+         PANEL 1: LOGIN & SIGN-UP INTERFACE
+         ========================================== -->
+    <div id="login-panel" class="panel show-panel">
+      <div class="login-wrapper">
+        
+        <!-- Left Hero Branding -->
+        <div class="login-hero">
+          <div class="brand-badge blinking-text">Welcome to Genial Collection</div>
+          <h1>Luxury Fashion & Signature Fragrance</h1>
+          <p>Enter your credentials to access your personalized shopping experience.</p>
         </div>
-        <form id="loginForm">
-          <label>
-            Email address
-            <input type="email" id="loginEmail" placeholder="you@example.com" required />
-          </label>
-          <label>
-            Password
-            <input type="password" id="loginPassword" placeholder="••••••••" required />
-          </label>
-          <button type="submit" class="primary-btn full-width">Login</button>
-          <p class="form-note">Demo access: any valid email + password</p>
-        </form>
+
+        <!-- Right Authentication Card -->
+        <div class="login-card">
+          <div class="card-header">
+            <h2 id="auth-title">Login Here</h2>
+          </div>
+
+          <form id="loginForm">
+            <!-- Full Name (Sign-up Mode) -->
+            <div class="input-group" id="name-group" style="display: none;">
+              <label for="auth-name">Full Name</label>
+              <input type="text" id="auth-name" placeholder="Enter Full Name" autocomplete="name">
+            </div>
+
+            <!-- Email Address -->
+            <div class="input-group" id="email-group">
+              <label for="loginEmail">Email Address</label>
+              <input type="email" id="loginEmail" placeholder="Enter Email Here" required autocomplete="email">
+            </div>
+
+            <!-- Password -->
+            <div class="input-group" id="password-group">
+              <label for="auth-password">Password</label>
+              <div class="password-wrapper">
+                <input type="password" id="auth-password" placeholder="Enter Password Here" required autocomplete="current-password">
+                <button type="button" id="toggle-password-btn" class="toggle-pwd-btn" title="Show/Hide Password">👁️</button>
+              </div>
+              <button type="button" id="forgot-password-btn" class="forgot-pwd-btn">Forgot Password?</button>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="auth-btn" class="submit-btn">Login</button>
+          </form>
+
+          <!-- Toggle Login / Sign Up -->
+          <p class="toggle-text">
+            <span id="toggle-label">Don't have an account?</span> 
+            <button type="button" id="toggle-auth-btn" class="toggle-link-btn">Sign up here</button>
+          </p>
+
+          <!-- Social Logins -->
+          <div class="social-login-section">
+            <p id="social-label">Log in with</p>
+            <div class="social-icons-row">
+              <a href="#" id="google-login-btn" class="social-btn google" title="Google">
+                <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.6l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.3 9 5 12 5z"/></svg>
+              </a>
+              <a href="#" id="facebook-login-btn" class="social-btn facebook" title="Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="#" id="twitter-login-btn" class="social-btn x-twitter" title="X / Twitter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
 
-    <div class="modal-backdrop" id="detailsModal">
-      <div class="modal-card detail-card">
-        <button class="close-modal" data-close="detailsModal" aria-label="Close">×</button>
-        <div class="detail-visual">
-          <img id="detailImage" src="" alt="Product detail" />
-        </div>
-        <div class="detail-copy">
-          <p class="eyebrow">Featured scent</p>
-          <h3 id="detailTitle">Product</h3>
-          <p id="detailDescription">Product notes and description.</p>
-          <ul>
-            <li>Long-lasting fragrance</li>
-            <li>Gift-ready packaging</li>
-            <li>Premium ingredients</li>
-          </ul>
-          <div class="detail-footer">
-            <strong id="detailPrice">₦20,000</strong>
-            <button class="primary-btn add-cart">Add to Cart</button>
+    <!-- ==========================================
+         PANEL 2: FULL-SCREEN ANIMATED SHOWCASE
+         ========================================== -->
+    <div id="showcase-panel" class="panel hide-panel">
+      <!-- Navigation Bar -->
+      <nav class="showcase-nav">
+        <button type="button" id="return-login-btn" class="nav-return-btn">← Back to Login</button>
+      </nav>
+
+      <div class="slideshow-wrapper">
+        <!-- SLIDE 1: PERFUME -->
+        <div class="slide-item image-cycle slide-active">
+          <div class="image-stack">
+            <img src="luxury perfume/0d190ebdcb8eba41689fb4de14953130.jpg" alt="Luxury Perfume 1">
+            <img src="luxury perfume/78471f97b6ed94a9cad803e7a1d230e8.jpg" alt="Luxury Perfume 2">
+            <img src="luxury perfume/f5b4f9396b259fbe37d242a5932daf87.jpg" alt="Luxury Perfume 3">
+            <img src="luxury perfume/54087e5eb3e464a56a6dc8af76332965.jpg" alt="Luxury Perfume 4">
+            <img src="luxury perfume/f8139c9568a6ae1d935e40e0f3b46c6a.jpg" alt="Luxury Perfume 5">
+            <img src="luxury perfume/f487782283a81460e6117f442d66ad49.jpg" alt="Luxury Perfume 6">
+          </div>
+          <div class="slide-text">
+            <span>Signature Fragrance</span>
+            <h2>Luxury Perfume Collection</h2>
           </div>
         </div>
+
+        <!-- SLIDE 2: SKINCARE -->
+        <div class="slide-item image-cycle">
+          <div class="image-stack">
+            <img src="luxury perfume/07a93a44267be4849e1b284d3dbec109.jpg" alt="Luxury Skincare 1">
+            <img src="luxury perfume/6db5af176fb09e3d407308d85a113bfb.jpg" alt="Luxury Skincare 2">
+            <img src="luxury perfume/8fad3d3b68147b301650d5b6d6af104e.jpg" alt="Luxury Skincare 3">
+          </div>
+          <div class="slide-text">
+            <span>Radiant Glow</span>
+            <h2>Essential Skincare Range</h2>
+          </div>
+        </div>
+
+        <!-- SLIDE 3: CLOTHING -->
+        <div class="slide-item image-cycle">
+          <div class="image-stack">
+            <img src="luxury perfume/8817a5cdaeb1cab90298fe0c5a245df7.jpg" alt="Custom Female Apparel 1">
+            <img src="luxury perfume/9445e125a76e3f6ab02c864cfe0abf8d.jpg" alt="Custom Female Apparel 2">
+            <img src="luxury perfume/4445519134055a16dea18ca5569cf9fb.jpg" alt="Custom Female Apparel 3">
+            <img src="luxury perfume/a696deda7ad658dd752f84a565f691a2.jpg" alt="Custom Female Apparel 4">
+          </div>
+          <div class="slide-text">
+            <span>Custom Tailoring</span>
+            <h2>Bespoke Female Apparel</h2>
+          </div>
+        </div>
+
+        <!-- SLIDE 4: LOGO FINALE -->
+        <div class="slide-item logo-finale-slide">
+          <div class="logo-finale-container">
+            <img src="WhatsApp Image 2026-08-09 at 4.50.37 PM.jpeg" alt="Genial Collection Logo" class="finale-logo-img">
+            <h1 class="brand-title">GENIAL COLLECTION</h1>
+            <p class="brand-tagline">Signature Fragrance & Bespoke Fashion</p>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <div class="toast" id="toast"></div>
+  </div>
 
-    <script src="script.js"></script>
-  
+  <script src="script.js"></script>
 </body>
 </html>
-
- 
-
-
-
-
