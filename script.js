@@ -3610,3 +3610,22 @@ function filterByCategory(categoryName, event) {
     }
   }
 }
+
+// Function to trigger Netlify email notification
+async function sendNotificationEmail(userEmail, userName, emailType) {
+  try {
+    const response = await fetch('/.netlify/functions/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: userEmail,
+        userName: userName,
+        type: emailType // 'welcome' or 'login'
+      })
+    });
+    const result = await response.json();
+    console.log('Notification email sent:', result);
+  } catch (error) {
+    console.error('Email error:', error);
+  }
+}
