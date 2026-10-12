@@ -1,6 +1,4 @@
 window.GENIAL_WHATSAPP_NUMBER = "2348081924652";
-
-// Make cart a global array variable so proceedToCheckout can access it
 let cart = JSON.parse(localStorage.getItem('genialCart')) || [];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -3444,10 +3442,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
-  // ======================================================
-  // 5. SHOWCASE & PANEL SWITCHING CONTROLLER
-  // ======================================================
   if (returnLoginBtn) {
     returnLoginBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -3458,10 +3452,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (typeof stopShowcase === 'function') stopShowcase();
     });
   }
-
-  // ======================================================
-  // 6. CONSULTATION FORM & WHATSAPP INTEGRATION
-  // ======================================================
   const ceoWhatsAppNumber = '2348000000000'; 
   const consultationForm = document.getElementById('consultationForm');
   const whatsappChatBtn = document.getElementById('whatsappChatBtn');
@@ -3502,10 +3492,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initSectionVideos('#tailoring');
   initSectionVideos('.tailoring-section');
 });
-
-// ======================================================
-// BACKGROUND VIDEO PLAYLIST CONTROLLER (MULTI-SECTION FIX)
-// ======================================================
 function initSectionVideos(containerSelector) {
   const container = document.querySelector(containerSelector);
   if (!container) return;
@@ -3579,9 +3565,6 @@ function initSectionVideos(containerSelector) {
   switchVideo(0);
 }
 
-// ======================================================
-// CATEGORY DRAWER & FILTER CONTROLS
-// ======================================================
 function toggleCategoryDrawer() {
   const drawer = document.getElementById('categoryDrawer');
   const overlay = document.getElementById('drawerOverlay');
@@ -3610,10 +3593,6 @@ function filterByCategory(categoryName, event) {
     }
   }
 }
-
-// ======================================================
-// EMAIL API NOTIFICATION CONTROLLER
-// ======================================================
 async function sendNotificationEmail(userEmail, userName, emailType) {
   try {
     const response = await fetch('/.netlify/functions/send-email', {
