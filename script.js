@@ -3270,7 +3270,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   resetIdleTimer();
 
-  // ======================================================
+ // ======================================================
   // 3. AUTHENTICATION CONTROLLER (LOGIN / SIGN UP)
   // ======================================================
   const authForm = document.getElementById('loginForm');
@@ -3333,8 +3333,8 @@ document.addEventListener('DOMContentLoaded', () => {
       toggleAuthBtn.addEventListener('touchend', switchAuthMode);
     }
 
-    // Consolidated Auth Submission Handler
-    const handleAuthSubmit = (e) => {
+    // Consolidated Auth Submission Handler (Made async for email trigger)
+    const handleAuthSubmit = async (e) => {
       if (e) e.preventDefault();
 
       const email = emailInput ? emailInput.value.trim().toLowerCase() : '';
@@ -3362,6 +3362,9 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('genialAuth', 'true');
         localStorage.setItem('genialCurrentUser', JSON.stringify({ name: userName, email }));
 
+        // Trigger Welcome Email
+        await sendNotificationEmail(email, userName, 'welcome');
+
         alert(`Account created successfully! Welcome to Genial Collection, ${userName}.`);
         window.location.href = 'geinalcollection.html';
       } else {
@@ -3370,6 +3373,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (foundUser) {
           localStorage.setItem('genialAuth', 'true');
           localStorage.setItem('genialCurrentUser', JSON.stringify(foundUser));
+
+          // Trigger Login Email
+          await sendNotificationEmail(foundUser.email, foundUser.name || 'Valued Customer', 'login');
+
           alert(`Welcome back, ${foundUser.name || 'Valued Customer'}!`);
           window.location.href = 'geinalcollection.html';
         } else {
@@ -3392,7 +3399,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Social Authentication Buttons
     document.querySelectorAll('.social-btn').forEach(btn => {
-      const handleSocialAuth = (e) => {
+      const handleSocialAuth = async (e) => {
         e.preventDefault();
         const platform = btn.classList.contains('google') ? 'Google' :
                          btn.classList.contains('facebook') ? 'Facebook' : 'X (Twitter)';
@@ -3404,6 +3411,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
           localStorage.setItem('genialAuth', 'true');
           localStorage.setItem('genialCurrentUser', JSON.stringify({ name, email }));
+
+          // Trigger Login/Welcome Email for Social Auth
+          await sendNotificationEmail(email, name, 'login');
 
           alert(`Logged in via ${platform}! Redirecting...`);
           window.location.href = 'geinalcollection.html';
