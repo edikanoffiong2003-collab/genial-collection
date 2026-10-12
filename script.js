@@ -3611,7 +3611,9 @@ function filterByCategory(categoryName, event) {
   }
 }
 
-// Function to trigger Netlify email notification
+// ======================================================
+// EMAIL API NOTIFICATION CONTROLLER
+// ======================================================
 async function sendNotificationEmail(userEmail, userName, emailType) {
   try {
     const response = await fetch('/.netlify/functions/send-email', {
@@ -3623,9 +3625,11 @@ async function sendNotificationEmail(userEmail, userName, emailType) {
         type: emailType // 'welcome' or 'login'
       })
     });
+    
     const result = await response.json();
-    console.log('Notification email sent:', result);
+    console.log('Notification email sent successfully:', result);
+    return result;
   } catch (error) {
-    console.error('Email error:', error);
+    console.error('Email notification API error:', error);
   }
 }
