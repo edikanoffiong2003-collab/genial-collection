@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genial Collection | Bespoke Custom Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background-color: #0b0b0b; color: #fff; font-family: 'Inter', sans-serif; margin: 0; padding: 0; overflow-x: hidden; }
+        .studio-header { text-align: center; padding: 40px 20px 20px; }
+        .studio-header h1 { font-size: 2.5rem; letter-spacing: 2px; color: #d4af37; margin-bottom: 8px; }
+        .studio-header p { color: #aaa; font-size: 1rem; max-width: 650px; margin: 0 auto; }
+        
+      
+        .feed-container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 20px 20px 30px; text-align: center; box-sizing: border-box; }
+        
+       
+        .return-container { text-align: center; margin: 30px 0 50px; }
+        
+       
+        .primary-return-btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #000000;
+            padding: 16px 36px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 40px;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .primary-return-btn:hover {
+            background-color: #f1c40f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(241, 196, 15, 0.6);
+        }
+
+     
+        .floating-wa-btn { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: #fff; border: none; padding: 15px 22px; border-radius: 50px; font-weight: bold; cursor: pointer; box-shadow: 0 8px 25px rgba(0,0,0,0.6); z-index: 1000; display: flex; align-items: center; gap: 8px; text-decoration: none; font-size: 0.95rem; transition: transform 0.2s; }
+        .floating-wa-btn:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <div class="studio-header">
+        <h1>GENIAL COLLECTION: LIVE LOOKBOOK</h1>
+        <p>Explore our live bespoke collection below. Click any style to view details, copy the pin, and connect directly with our designer via WhatsApp.</p>
+    </div>
+
+    
+    <div class="feed-container">
+        <a data-pin-do="embedBoard" 
+           data-pin-board-width="1300" 
+           data-pin-scale-height="800" 
+           data-pin-scale-width="130" 
+           href="https://www.pinterest.com/genialcollection05/genial-bespoke-lookbook/">
+        </a>
+    </div>
+
+    
+    <div class="return-container">
+        <a href="index.html" class="primary-return-btn">
+            ← Return to Personalized Shopping Experience
+        </a>
+    </div>
+
+   
+    <a href="javascript:void(0)" class="floating-wa-btn" onclick="openWhatsAppChat()">
+        <span>💬 Designer Chat</span>
+    </a>
+
+    <footer style="text-align: center; padding: 40px 20px; border-top: 1px solid #222; margin-top: 20px; color: #777; font-size: 0.85rem; line-height: 1.6;">
+        <p style="max-width: 700px; margin: 0 auto 15px auto;">
+            <strong style="color: #d4af37;">DISCLAIMER / DESIGN INSPIRATION NOTICE:</strong> 
+            Some design imagery and videos showcased via our live Pinterest feed serve as style inspiration and visual reference for bespoke tailoring. Genial Collection does not claim ownership of third-party copyrighted runway media. Every piece custom-ordered is handcrafted as an original interpretation tailored specifically to our clients' unique measurements.
+        </p>
+        <p style="color: #555;">&copy; 2026 Genial Collection (<a href="https://genialcollection.shop" style="color: #d4af37; text-decoration: none;">genialcollection.shop</a>). All Rights Reserved.</p>
+    </footer>
+
+   
+    <script async defer src="https://assets.pinterest.com/js/pinit.js"></script>
+
+    <script>
+        // Update with your actual WhatsApp phone number including country code (e.g., 2348012345678)
+        const designerWhatsAppNumber = "2348081924652"; 
+
+        function openWhatsAppChat() {
+            const message = "Hello Genial Collection! I am browsing your live Pinterest lookbook and I'd like to share a custom style/video to discuss measurements and pricing with the designer.";
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${designerWhatsAppNumber}?text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
